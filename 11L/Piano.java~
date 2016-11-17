@@ -1,0 +1,46 @@
+import wheelsunh.users.*;
+import java.awt.Color;
+import java.awt.event.MouseEvent;
+
+/**
+ * makes a draggable piano implementing Draggable
+ * 
+ * @author Sam Young
+ */
+
+public class Piano extends ShapeGroup
+{
+    //--------------instance variable------------------------------
+    private Rectangle body; 
+    private Rectangle keys;
+    int bodyX = 25, bodyY = 25;
+    int keysX = 40, keysY = 90;
+    int x = 100, y = 100;
+    //--------------piano constructor------------------------------
+    
+    public Piano()
+    {
+        body = new Rectangle(Color.BLACK);
+        body.setSize( 200, 200 );
+        keys = new Rectangle(Color.WHITE);
+        keys.setSize( 60 , 20 );
+        
+        
+    }
+    public Piano( int x, int y )
+    {
+        body = new Rectangle(Color.BLACK);
+        body.setSize( 200, 100 );
+        keys = new Rectangle(Color.WHITE);
+        keys.setSize( 175 , 20 );
+        body.setLocation( x + bodyX, y + bodyY );
+        keys.setLocation( x + keysX, y + keysY );
+        
+     }                     
+    
+    public static void main( String[] args )
+    {
+        Frame f1 = new Frame();
+        Piano p1 = new Piano( 100, 100 );
+      }
+}

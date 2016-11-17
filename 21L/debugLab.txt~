@@ -1,0 +1,79 @@
+CS415 debugLab Notes
+   
+Name:   
+
+You will put breakpoints at the line numbers listed below. Every time you reach that line number in debug mode, add the current value of each specified variable to the list of previous values for that variable.  Do this before execution of the line. Occasionally, there is a specific question to be answered.
+
+Loops.java
+-----------------
+Step 1
+------
+Break at line 140: convertArgsToInts( args, defaultVal );  
+
+   What does the first error message say?
+           
+***Error in command line parameter: a
+   It's not an int. Using: -1
+***Error in command line parameter: b
+   It's not an int. Using: -1
+   
+   What is shown as the last output in the Interactions panel? 
+   (this is output from the Program not DrJava) You can
+   either reproduce the output, or use words to explain what it is. 
+   Program output is in green font; don't confuse that with the debugger
+   output, which is in blue.
+       
+       1 -1 2 -1 
+
+---------------------------------
+Step 2 - Step Into and Step Over
+--------    
+Line numbers for statements executed in methods in which you used StepInto (only 1st two times through loops):
+
+convertArgsToInts: 124, 126, 127, 126, 127
+       
+drawLines: 48, 49, 51, 52, 49 , 51, 52
+
+drawBoxes: 59 , 61, 59, 61, 63, 64, 65, 61, 59
+---------------------------------
+Step 3 - Watch at line 27 (you will have 6 values for each variable)
+--------    
+line 27: n+=1;
+
+   n:  
+  
+   i:  
+      
+   j:  
+---------------------------------
+Step 4 - Watch at line 39 (you will have 6 values for each variable)
+--------    
+line 39: n++;
+
+   n:  
+    
+   i:  
+
+   j:  
+---------------------------------
+Step 5 - Watch at line 63 (you will have 14  values for each variable)
+--------    
+line 63: Rectangle temp;
+
+   i: 
+
+   j: 
+---------------------------------
+Step 6 - Watch at line 82 (you will have 15 values for sum)
+--------    
+line 82: b.setText( "" + sum );
+   
+   sum:   
+---------------------------------
+Step 7 - Watch at line 96
+--------       
+line 96: System.err.println( ... );
+
+   arg:       
+
+   cmdErrors: 
